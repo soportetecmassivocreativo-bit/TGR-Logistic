@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* TGR Color Palette */
+  --tgr-lime: #D4FF00;
+  --tgr-lime-dark: #9BC200;
+  --tgr-forest-green: #07260E;
+  --tgr-forest-green-light: #0D3F19;
+  
+  /* Dark Theme */
+  --tgr-black: #070708;
+  --tgr-dark: #0f1012;
+  --tgr-gray: #1b1d22;
+  --tgr-gray-light: #F8F9FA;
+  --tgr-white: #F8F9FA;
+  --tgr-green-accent: #00E676;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --container-padding: clamp(1rem, 5vw, 4rem);
+  --section-spacing: clamp(3rem, 7vw, 6rem);
+  
+  /* Borders */
+  --tech-border: 1px solid rgba(212, 255, 0, 0.15);
+  --tech-border-dim: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: initial; /* Handled by Lenis */
+}
+
+/* Custom green cursor on desktop */
+@media (min-width: 1024px) {
+  body {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4.5 3v16.5l5.25-5.25H18L4.5 3z' fill='%23D4FF00' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 4 3, auto;
+  }
+  
+  a, button, [role="button"], input, select, textarea {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 4a2 2 0 0 0-2 2v9.5l-2.5-1.5a1.5 1.5 0 0 0-2 2.5l5.5 5.5A6 6 0 0 0 16.5 24h5a4 4 0 0 0 4-4V11a2 2 0 0 0-2-2 2 2 0 0 0-2 2v-2a2 2 0 0 0-2-2 2 2 0 0 0-2 2V6a2 2 0 0 0-2-2z' fill='%23D4FF00' stroke='black' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 8 4, pointer;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--tgr-black);
+  color: var(--tgr-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--tgr-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--tgr-gray);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tgr-lime);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: inherit;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Glassmorphism utils */
+.glass {
+  background: rgba(15, 16, 18, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Industrial Grid Accents */
+.tech-grid {
+  position: relative;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.tech-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 60%, var(--tgr-black) 100%);
+  pointer-events: none;
+}
+
+.tech-border-top {
+  border-top: var(--tech-border);
+}
+
+.tech-border-bottom {
+  border-bottom: var(--tech-border);
+}
+
+/* Utility classes */
+.text-lime { color: var(--tgr-lime); }
+.text-white { color: var(--tgr-white); }
+.text-gray { color: var(--tgr-gray-light); }
+.text-forest { color: var(--tgr-forest-green-light); }
+
+.bg-black { background-color: var(--tgr-black); }
+.bg-dark { background-color: var(--tgr-dark); }
+.bg-forest { background-color: var(--tgr-forest-green); }
+.bg-lime { background-color: var(--tgr-lime); color: var(--tgr-black); }
+
+/* GSAP Helper classes */
+.visibility-hidden {
+  visibility: hidden;
+}
+
+/* Button aesthetics inspired by Behance */
+.awwwards-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+}
+
+.awwwards-btn-primary {
+  background-color: var(--tgr-lime);
+  color: var(--tgr-black);
+}
+
+.awwwards-btn-primary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--tgr-white);
+  z-index: -1;
+  transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.awwwards-btn-primary:hover::after {
+  height: 100%;
+}
+
+.awwwards-btn-secondary {
+  border: var(--tech-border);
+  color: var(--tgr-white);
+  backdrop-filter: blur(8px);
+}
+
+.awwwards-btn-secondary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--tgr-lime);
+  z-index: -1;
+  transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.awwwards-btn-secondary:hover {
+  color: var(--tgr-black);
+}
+
+.awwwards-btn-secondary:hover::after {
+  height: 100%;
+}
+

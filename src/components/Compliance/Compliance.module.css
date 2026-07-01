@@ -1,0 +1,275 @@
+/* ── Compliance Section ─────────────────────────────────────── */
+
+.section {
+  padding: var(--section-spacing) 0 calc(var(--section-spacing) / 2);
+  background-color: var(--tgr-black);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(212,255,0,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sectionLabel {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: rgba(212, 255, 0, 0.08);
+  color: var(--tgr-lime);
+  border: 1px solid rgba(212, 255, 0, 0.2);
+  border-radius: 2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.blockTitle {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--tgr-white);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.blockDesc {
+  font-size: 1rem;
+  color: var(--tgr-gray-light);
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+/* ── Versatility Block ─── */
+.versatilityBlock {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.cargoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.cargoCard {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+  background: var(--tgr-dark);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  border-top: 2px solid var(--tgr-lime);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cargoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+
+.cargoIcon {
+  color: var(--tgr-lime);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cargoCard h4 {
+  font-size: 0.95rem;
+  color: var(--tgr-white);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.cargoCard p {
+  font-size: 0.85rem;
+  color: var(--tgr-gray-light);
+  line-height: 1.6;
+}
+
+/* ── Normative Row ─── */
+.normativeRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.normCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.normCard {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: var(--tgr-dark);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  border-left: 3px solid rgba(212,255,0,0.4);
+  transition: border-left-color 0.3s ease;
+}
+
+.normCard:hover {
+  border-left-color: var(--tgr-lime);
+}
+
+.normIcon {
+  color: var(--tgr-lime);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.normCard h4 {
+  font-size: 0.95rem;
+  color: var(--tgr-white);
+  margin-bottom: 0.35rem;
+}
+
+.normCard p {
+  font-size: 0.85rem;
+  color: var(--tgr-gray-light);
+  line-height: 1.6;
+}
+
+/* ── Experience ─── */
+.expList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.expItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--tgr-gray-light);
+}
+
+.expIcon {
+  color: var(--tgr-lime);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.expQuote {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--tgr-white);
+  line-height: 1.7;
+  padding: 1.25rem 1.5rem;
+  background: rgba(212,255,0,0.04);
+  border-left: 3px solid var(--tgr-lime);
+  border-radius: 0 8px 8px 0;
+  margin-top: 1rem;
+}
+
+/* ── Attention Block ─── */
+.attentionBlock {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+}
+
+.attentionTitle {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--tgr-white);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.attentionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.attentionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--tgr-gray-light);
+}
+
+.attentionCheck {
+  color: var(--tgr-lime);
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ctaBox {
+  background: var(--tgr-dark);
+  border: 1px solid rgba(212,255,0,0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ctaBox h3 {
+  font-size: 1.4rem;
+  color: var(--tgr-white);
+}
+
+.ctaBox p {
+  font-size: 0.9rem;
+  color: var(--tgr-gray-light);
+  line-height: 1.6;
+}
+
+.phoneLink {
+  font-size: 0.85rem;
+  color: var(--tgr-lime);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.phoneLink:hover {
+  opacity: 1;
+}
+
+/* ── Responsive ─── */
+@media (max-width: 1024px) {
+  .normativeRow {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .cargoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .attentionBlock {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaBox {
+    min-width: auto;
+    width: 100%;
+  }
+}

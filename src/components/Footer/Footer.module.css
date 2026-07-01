@@ -1,0 +1,130 @@
+.footer {
+  background-color: var(--tgr-black);
+  position: relative;
+  padding-top: 6rem;
+  border-top: var(--tech-border);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 4rem;
+  padding-bottom: 5rem;
+  border-bottom: var(--tech-border-dim);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--tgr-white);
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--tgr-gray-light);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 320px;
+  font-size: 0.95rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social a {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background-color: var(--tgr-dark);
+  color: var(--tgr-white);
+  border: var(--tech-border-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+.social a:hover {
+  border-color: var(--tgr-lime);
+  background-color: var(--tgr-lime);
+  color: var(--tgr-black);
+}
+
+.tiktokIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colLinks h3 {
+  color: var(--tgr-white);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.colLinks ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.colLinks a {
+  color: var(--tgr-gray-light);
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.colLinks a:hover {
+  color: var(--tgr-lime);
+}
+
+.contactList li {
+  color: var(--tgr-gray-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.bottomBar {
+  padding: 2.5rem 0;
+  display: flex;
+  justify-content: center; /* Center the text */
+  align-items: center;
+  color: var(--tgr-gray-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .bottomBar {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+

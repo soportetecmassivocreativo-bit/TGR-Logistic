@@ -1,0 +1,43 @@
+.cursorDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--tgr-lime);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursorRing {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--tgr-lime);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.hoverText {
+  font-family: var(--font-heading);
+  font-size: 0.25rem; /* Will scale up with cursor ring */
+  font-weight: 700;
+  color: var(--tgr-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  transform: scale(0.8);
+  opacity: 0.9;
+}
+
+.hovering {
+  mix-blend-mode: normal;
+}

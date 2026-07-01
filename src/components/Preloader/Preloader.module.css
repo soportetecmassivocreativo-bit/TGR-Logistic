@@ -1,0 +1,84 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--tgr-black);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.techBackground {
+  position: absolute;
+  inset: 0;
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(212, 255, 0, 0.01) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 255, 0, 0.01) 1px, transparent 1px);
+  pointer-events: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  z-index: 10;
+}
+
+.logoWrapper {
+  overflow: hidden;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: var(--tgr-white);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.middleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progressContainer {
+  width: 300px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.progressBar {
+  width: 0%;
+  height: 100%;
+  background-color: var(--tgr-lime);
+}
+
+.percentage {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800;
+  color: var(--tgr-lime);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.techDetails {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.75rem;
+  color: var(--tgr-gray-light);
+  font-family: monospace;
+  letter-spacing: 0.1em;
+}
+

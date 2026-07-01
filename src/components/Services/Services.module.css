@@ -1,0 +1,204 @@
+.services {
+  padding: var(--section-spacing) 0;
+  background-color: var(--tgr-black);
+  position: relative;
+  overflow: hidden;
+  border-bottom: var(--tech-border-dim);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.header {
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background-color: rgba(212, 255, 0, 0.08);
+  color: var(--tgr-lime);
+  border: 1px solid rgba(212, 255, 0, 0.2);
+  border-radius: 2px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  color: var(--tgr-white);
+  line-height: 1.15;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 320px;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--tgr-dark);
+  border-radius: 4px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border: var(--tech-border-dim);
+  transition: border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+/* Custom spotlight glow effect */
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(212, 255, 0, 0.06),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card:hover {
+  border-color: rgba(212, 255, 0, 0.35);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.iconWrapper {
+  color: var(--tgr-lime);
+  background: rgba(7, 7, 8, 0.6);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: var(--tech-border-dim);
+  z-index: 2;
+}
+
+.cardContent {
+  z-index: 2;
+  margin-top: 2rem;
+}
+
+.cardBgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cardBgImage .image {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card:hover .cardBgImage .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 16, 18, 0.6) 0%,
+    rgba(15, 16, 18, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.cardContent h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--tgr-white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.cardContent p {
+  color: var(--tgr-gray-light);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  width: 24px;
+  height: 24px;
+  color: var(--tgr-gray-light);
+  opacity: 0.4;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.4s ease, opacity 0.4s ease;
+  z-index: 2;
+}
+
+.arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover .arrow {
+  opacity: 1;
+  color: var(--tgr-lime);
+  transform: translate(5px, -5px);
+}
+
+/* Grid Spans */
+.cardLarge, .cardMedium, .cardSmall {
+  grid-column: span 1;
+}
+
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  
+  .cardLarge, .cardMedium, .cardSmall {
+    grid-column: span 1;
+    min-height: 320px;
+  }
+  
+  .cardLarge:nth-child(3) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .cardLarge, .cardMedium, .cardSmall {
+    grid-column: span 1;
+    padding: 2rem;
+    min-height: auto;
+  }
+  
+  .cardLarge:nth-child(1), .cardLarge:nth-child(6) {
+    grid-column: span 1;
+  }
+}
+
