@@ -57,6 +57,11 @@ export default function About() {
         <div className={styles.imageWrapper}>
 
           <div className={styles.imageContainer} ref={imageRef}>
+            <div className={styles.scanLine}></div>
+            <div className={styles.techBadge}>
+              <span className={styles.pulseDot}></span>
+              FLOTA ACTIVA EN RUTA
+            </div>
             <Image
               src="/images/about_transport_clean.png"
               alt="Gandola pesada transportando carga industrial en carretera"

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -11,8 +12,15 @@ export default function Footer() {
         <div className={styles.grid}>
           
           <div className={styles.colBrand}>
-            <a href="#home" className={styles.logo}>
-              <span className="text-lime">TGR</span> LOGISTICS
+            <a href="#home" className={styles.logoLink}>
+              <Image 
+                src="/images/logo.png" 
+                alt="TGR Logistics Services C.A." 
+                width={200} 
+                height={57} 
+                unoptimized={true}
+                className={styles.logoImage} 
+              />
             </a>
             <p className={styles.description}>
               Empresa líder en logística y transporte de carga pesada. Soluciones integrales de puerto a destino en toda Venezuela.
@@ -57,7 +65,8 @@ export default function Footer() {
             <h3>Contacto</h3>
             <ul className={styles.contactList}>
               <li>Intercomunal Ali Primera, redoma del taparo, via moruy, Punto Fijo, Estado Falcón</li>
-              <li>contacto@tgrlogistics.com</li>
+              <li><a href="mailto:Tgrlogisticserv@gmail.com">Tgrlogisticserv@gmail.com</a></li>
+              <li><a href="tel:+584146968798">0414-6968798</a></li>
               <li>J-503448040</li>
             </ul>
           </div>

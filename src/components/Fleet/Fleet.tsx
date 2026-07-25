@@ -18,7 +18,7 @@ export default function Fleet() {
 
     const calculateScroll = () => {
       const horizontalDistance = slider.scrollWidth - window.innerWidth;
-      return horizontalDistance > 0 ? horizontalDistance : 0;
+      return Math.max(0, horizontalDistance);
     };
 
     const tl = gsap.to(slider, {
@@ -27,9 +27,9 @@ export default function Fleet() {
       scrollTrigger: {
         trigger: pinContainer,
         pin: true,
-        scrub: 1.2,
+        scrub: 1,
         start: 'top top',
-        end: () => `+=${slider.scrollWidth - window.innerWidth}`,
+        end: () => `+=${calculateScroll() * 1.15}`,
         invalidateOnRefresh: true,
       }
     });

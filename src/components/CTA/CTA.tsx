@@ -27,10 +27,10 @@ export default function CTA() {
           </p>
           
           <div className={`cta-reveal ${styles.buttons}`}>
-            <a href="mailto:contacto@tgrlogistics.com" className="awwwards-btn awwwards-btn-primary" data-cursor="ESCRIBIR">
+            <a href="mailto:Tgrlogisticserv@gmail.com" className="awwwards-btn awwwards-btn-primary" data-cursor="ESCRIBIR">
               Solicitar Cotización
             </a>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="awwwards-btn awwwards-btn-secondary" data-cursor="WHATSAPP">
+            <a href="https://wa.me/584146968798" target="_blank" rel="noopener noreferrer" className="awwwards-btn awwwards-btn-secondary" data-cursor="WHATSAPP">
               Contactar por WhatsApp
             </a>
           </div>
@@ -41,14 +41,14 @@ export default function CTA() {
             <div className={styles.iconWrapper}><Phone size={24} /></div>
             <div>
               <h4>Llámanos</h4>
-              <p>+58 (412) 642-1240</p>
+              <p><a href="tel:+584146968798">0414-6968798</a></p>
             </div>
           </div>
           <div className={styles.infoItem}>
             <div className={styles.iconWrapper}><Mail size={24} /></div>
             <div>
               <h4>Escríbenos</h4>
-              <p>contacto@tgrlogistics.com</p>
+              <p><a href="mailto:Tgrlogisticserv@gmail.com">Tgrlogisticserv@gmail.com</a></p>
             </div>
           </div>
           <div className={styles.infoItem}>

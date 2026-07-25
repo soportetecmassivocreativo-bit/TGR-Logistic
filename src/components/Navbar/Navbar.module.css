@@ -37,13 +37,13 @@
 
 .logoImage {
   object-fit: contain;
-  height: 150px !important; /* Logo enlarged to 150px */
+  height: 55px !important;
   width: auto !important;
   transition: height 0.4s ease;
 }
 
 .header.scrolled .logoImage {
-  height: 120px !important; /* Scaled down slightly when scrolled */
+  height: 45px !important;
 }
 
 .desktopNav {

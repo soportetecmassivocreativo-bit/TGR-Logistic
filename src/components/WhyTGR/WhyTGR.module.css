@@ -52,8 +52,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
   align-items: center;
-  margin-bottom: 3.5rem;
-  padding-bottom: 3.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
@@ -133,6 +133,13 @@
   position: relative;
   overflow: hidden;
   min-height: 280px;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mapCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 255, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(212, 255, 0, 0.12);
 }
 
 .mapBadge {
@@ -179,17 +186,31 @@
 
 .dot {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--tgr-lime);
-  box-shadow: 0 0 10px rgba(212,255,0,0.6);
-  animation: pulse-dot 2s infinite;
+  box-shadow: 0 0 12px rgba(212,255,0,0.8);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid var(--tgr-lime);
+  animation: radarWave 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 @keyframes pulse-dot {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+}
+
+@keyframes radarWave {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
 }
 
 .routeLines {
@@ -197,6 +218,17 @@
   inset: 0;
   width: 100%;
   height: 100%;
+}
+
+.routeLines polyline {
+  stroke-dasharray: 6 4;
+  animation: dashFlow 2s linear infinite;
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -20;
+  }
 }
 
 /* ── Security Cards ─── */

@@ -76,6 +76,7 @@ export default function Technology() {
 
         <div className={styles.statsGrid}>
           <div className={`tech-text ${styles.statCard}`}>
+            <div className={styles.statAccentLine}></div>
             <h3 className={styles.statValue}>
               <Counter end={95} suffix="%" />
             </h3>
@@ -83,6 +84,7 @@ export default function Technology() {
           </div>
           
           <div className={`tech-text ${styles.statCard}`}>
+            <div className={styles.statAccentLine}></div>
             <h3 className={styles.statValue}>
               <Counter end={50} suffix="+" />
             </h3>
@@ -90,6 +92,7 @@ export default function Technology() {
           </div>
           
           <div className={`tech-text ${styles.statCard}`}>
+            <div className={styles.statAccentLine}></div>
             <h3 className={styles.statValue}>
               <Counter end={300} suffix="+" />
             </h3>

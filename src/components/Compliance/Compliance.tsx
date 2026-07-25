@@ -175,8 +175,8 @@ export default function Compliance() {
               <a href="#contact" className="awwwards-btn awwwards-btn-primary" data-cursor="COTIZAR">
                 Solicitar Cotización
               </a>
-              <a href="tel:+58" className={styles.phoneLink}>
-                O llámenos directamente
+              <a href="tel:+584146968798" className={styles.phoneLink}>
+                O llámenos directamente (0414-6968798)
               </a>
             </div>
           </div>
