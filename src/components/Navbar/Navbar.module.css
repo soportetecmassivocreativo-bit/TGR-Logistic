@@ -60,10 +60,11 @@
 }
 
 .link {
-  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
   font-weight: 800; /* Extra Bold */
-  text-transform: uppercase; /* Upper-case to match premium look */
-  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--tgr-white);
   transition: all 0.3s ease;
   text-decoration: none;

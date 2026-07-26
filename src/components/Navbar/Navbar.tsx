@@ -45,7 +45,7 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <nav className={styles.desktopNav}>
           <ul className={styles.navLinks}>
-            <li><a href="#home" className={styles.link} data-cursor="Ir a">Home</a></li>
+            <li><a href="#home" className={styles.link} data-cursor="Ir a">Inicio</a></li>
             <li><a href="#about" className={styles.link} data-cursor="Ir a">Nosotros</a></li>
             <li><a href="#features" className={styles.link} data-cursor="Ir a">Servicios</a></li>
             <li><a href="#fleet" className={styles.link} data-cursor="Ir a">Unidades</a></li>
@@ -69,7 +69,7 @@ export default function Navbar() {
       {/* Mobile Nav */}
       <nav className={`${styles.mobileNav} ${mobileOpen ? styles.mobileOpen : ''}`}>
         <ul className={styles.mobileLinks}>
-          <li className="mobile-link-item"><a href="#home" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Home</a></li>
+          <li className="mobile-link-item"><a href="#home" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Inicio</a></li>
           <li className="mobile-link-item"><a href="#about" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Nosotros</a></li>
           <li className="mobile-link-item"><a href="#features" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Servicios</a></li>
           <li className="mobile-link-item"><a href="#fleet" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Unidades</a></li>
