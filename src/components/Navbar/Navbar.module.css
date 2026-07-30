@@ -3,16 +3,21 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 999999 !important;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   transition: all 0.3s ease;
   padding: 1rem 0;
   background-color: #070708 !important;
+  background: #070708 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header.scrolled {
   padding: 0.6rem 0;
   background-color: #070708 !important;
+  background: #070708 !important;
   border-bottom: 1px solid rgba(212, 255, 0, 0.2);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
 }
