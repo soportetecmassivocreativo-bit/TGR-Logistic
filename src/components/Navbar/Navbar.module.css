@@ -3,19 +3,22 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  padding: 1.25rem 0;
-  background: transparent;
-  border-bottom: none;
+  padding: 1rem 0;
+  background: rgba(7, 7, 8, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .header.scrolled {
-  padding: 0.75rem 0;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.6rem 0;
+  background: rgba(7, 7, 8, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(212, 255, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .navPill {
@@ -31,19 +34,19 @@
 .logoLink {
   display: flex;
   align-items: center;
-  z-index: 101;
+  z-index: 1001;
   position: relative;
 }
 
 .logoImage {
   object-fit: contain;
-  height: 55px !important;
+  height: 52px !important;
   width: auto !important;
   transition: height 0.4s ease;
 }
 
 .header.scrolled .logoImage {
-  height: 45px !important;
+  height: 42px !important;
 }
 
 .desktopNav {
@@ -205,6 +208,28 @@
   
   .mobileToggle {
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.6rem 0;
+    background: rgba(7, 7, 8, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navPill {
+    padding: 0 1rem;
+  }
+
+  .logoImage {
+    height: 38px !important;
+  }
+
+  .header.scrolled .logoImage {
+    height: 34px !important;
   }
 }
 
