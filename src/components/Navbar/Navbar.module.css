@@ -7,19 +7,21 @@
   isolation: isolate;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
-  transition: all 0.3s ease;
-  padding: 1rem 0;
-  background-color: #070708 !important;
-  background: #070708 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  padding: 1.25rem 0;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: none !important;
 }
 
 .header.scrolled {
   padding: 0.6rem 0;
-  background-color: #070708 !important;
-  background: #070708 !important;
-  border-bottom: 1px solid rgba(212, 255, 0, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+  background: rgba(7, 7, 8, 0.92) !important;
+  background-color: rgba(7, 7, 8, 0.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 255, 0, 0.15) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .navPill {
@@ -214,11 +216,19 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: 0.6rem 0;
-    background: rgba(7, 7, 8, 0.96);
+    padding: 0.75rem 0;
+    background: transparent !important;
+    background-color: transparent !important;
+    border-bottom: none !important;
+  }
+
+  .header.scrolled {
+    padding: 0.5rem 0;
+    background: rgba(7, 7, 8, 0.94) !important;
+    background-color: rgba(7, 7, 8, 0.94) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
   .navPill {
