@@ -73,13 +73,13 @@ export default function WhyTGR() {
                 </div>
               </div>
               <div className={styles.routeDots}>
-                <span className={styles.dot} style={{top:'15%', left:'15%'}} />
-                <span className={styles.dot} style={{top:'20%', left:'80%'}} />
-                <span className={styles.dot} style={{top:'75%', left:'88%'}} />
-                <span className={styles.dot} style={{top:'82%', left:'55%'}} />
-                <span className={styles.dot} style={{top:'85%', left:'25%'}} />
+                <span className={styles.dot} style={{top:'15%', left:'75%'}} />
+                <span className={styles.dot} style={{top:'48%', left:'90%'}} />
+                <span className={styles.dot} style={{top:'82%', left:'78%'}} />
+                <span className={styles.dot} style={{top:'84%', left:'50%'}} />
+                <span className={styles.dot} style={{top:'82%', left:'20%'}} />
                 <svg className={styles.routeLines} viewBox="0 0 300 200">
-                  <polyline points="45,30 240,40 264,150 165,164 75,170" fill="none" stroke="#d4ff00" strokeWidth="1.5" strokeDasharray="6 4" opacity="0.6"/>
+                  <polyline points="225,30 270,96 234,164 150,168 60,164" fill="none" stroke="#d4ff00" strokeWidth="1.5" strokeDasharray="6 4" opacity="0.65"/>
                 </svg>
               </div>
             </div>
