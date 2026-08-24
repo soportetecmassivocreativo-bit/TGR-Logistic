@@ -148,6 +148,8 @@
   color: var(--tgr-lime);
   letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 5;
 }
 
 .mapStats {
@@ -155,7 +157,7 @@
   gap: 2rem;
   margin-bottom: 2rem;
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 .mapStat {
