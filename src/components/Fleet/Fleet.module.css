@@ -70,7 +70,7 @@
 
 .card {
   width: 800px;
-  height: 520px;
+  height: 550px;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
@@ -87,7 +87,7 @@
 }
 
 .imageWrapper {
-  width: 48%;
+  width: 45%;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -125,7 +125,7 @@
 .content {
   width: 55%;
   height: 100%;
-  padding: 3rem;
+  padding: 2.25rem 2.5rem 2.25rem 2.5rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -135,40 +135,40 @@
 
 .cardNumber {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 800;
   color: rgba(212, 255, 0, 0.35);
   line-height: 1;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
   letter-spacing: -0.05em;
 }
 
 .content h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: var(--tgr-white);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.01em;
 }
 
 .cardDesc {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--tgr-white);
-  line-height: 1.6;
-  margin-bottom: 1.75rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 .specsTable {
   border-top: var(--tech-border-dim);
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .specRow {
   display: flex;
   justify-content: space-between;
-  padding: 0.65rem 0;
+  padding: 0.5rem 0;
   border-bottom: var(--tech-border-dim);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .specLabel {
